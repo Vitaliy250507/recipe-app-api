@@ -18,6 +18,6 @@ jobs:
       - name: Test
         run: docker compose run --rm app sh -c "uv run manage.py test"
       - name: Lint
-        run: docker compose run --rm app sh -c "uv runflake8"
+        run: docker compose run --rm app sh -c "uv run flake8"
 
 
