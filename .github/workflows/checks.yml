@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Test
-        run: docker compose run --rm app sh -c "uv run manage.py test"
+        run: docker compose run --rm app sh -c "uv run mange.py wait_for_db && uv run manage.py test"
       - name: Lint
         run: docker compose run --rm app sh -c "uv run flake8"
 
